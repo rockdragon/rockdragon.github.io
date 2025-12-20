@@ -1,4 +1,63 @@
-body{display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#0f172a;color:#fff;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto}
-.clock{background:linear-gradient(135deg,#111827,#0b1220);padding:2rem;border-radius:16px;box-shadow:0 12px 40px rgba(2,6,23,0.6);text-align:center}
-#time{font-size:2.2rem;letter-spacing:1px}
-#date{margin-top:.6rem;color:#9ca3af}
+@charset "utf-8";
+@import url(normalize.css);
+
+/*===========================
+    基本設定
+===========================*/
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    margin:0;
+    background:#0f172a;
+    color:#fff;
+}
+.cotainer{
+    clear: both;
+    display: block;
+    background:linear-gradient(135deg,#111827,#0b1220);
+    padding:1rem;
+    border-radius:16px;
+    box-shadow:0 12px 40px rgba(2,6,23,0.6);
+}
+.cotainer ul{
+    align-items:center;
+    flex-wrap:wrap;
+    margin:0 0 0 1rem;
+    padding:0
+}
+.cotainer ul li{
+    width:100%;
+    /* height:3.1rem; */
+    line-height: 1.8rem;
+    margin:0;
+    padding:0;
+    border-radius:16px;
+    box-shadow:0 12px 24px rgba(2,6,23,0.3);
+    font-size:1.2rem;
+    font-weight:500;
+    color:#fff;
+    transition:all .3s ease;
+    list-style-type: none;
+}
+.cotainer ul li a {
+    color: white;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+.no-flex-container {
+    clear: both;
+    display: block;
+}
+.no-flex-container ul {
+    margin:0;
+}
