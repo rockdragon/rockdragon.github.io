@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莫耶のポートフォリオ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap"
+          rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0a1628',
+                            800: '#112240',
+                            700: '#1a365d',
+                            600: '#234b7a',
+                        },
+                        tech: {
+                            cyan: '#0ea5e9',
+                            teal: '#14b8a6',
+                            accent: '#38bdf8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px)",
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-navy-900 text-gray-100 font-sans">
+<nav id="navbar"
+     class="fixed top-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-700/50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <a href="#about" class="text-xl font-bold font-serif text-tech-accent tracking-wide">
+                莫耶のポートフォリオ
+            </a>
+            <ul class="hidden md:flex space-x-8">
+                <li>
+                    <a href="#about"
+                       class="nav-link text-sm font-medium hover:text-tech-accent transition-colors duration-300"
+                       data-section="about">
+                        自己紹介
+                    </a>
+                </li>
+                <li>
+                    <a href="#part-time"
+                       class="nav-link text-sm font-medium hover:text-tech-accent transition-colors duration-300"
+                       data-section="part-time">
+                        アルバイト経験
+                    </a>
+                </li>
+                <li>
+                    <a href="#hobbies"
+                       class="nav-link text-sm font-medium hover:text-tech-accent transition-colors duration-300"
+                       data-section="hobbies">
+                        趣味・特技
+                    </a>
+                </li>
+                <li>
+                    <a href="#strengths"
+                       class="nav-link text-sm font-medium hover:text-tech-accent transition-colors duration-300"
+                       data-section="strengths">
+                        強み・特長
+                    </a>
+                </li>
+                <li>
+                    <a href="#portfolio"
+                       class="nav-link text-sm font-medium hover:text-tech-accent transition-colors duration-300"
+                       data-section="portfolio">
+                        ポートフォリオ
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact"
+                       class="nav-link text-sm font-medium hover:text-tech-accent transition-colors duration-300"
+                       data-section="contact">
+                        お問い合わせ
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="about" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern bg-[size:60px_60px]"></div>
+    <div class="absolute top-20 right-20 w-96 h-96 bg-tech-cyan/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-20 w-72 h-72 bg-tech-teal/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-4xl mt-8 mx-auto px-6 text-center">
+        <div class="mb-4">
+            <div class="w-32 h-32 mx-auto bg-white rounded-full border-2 border-tech-accent/30 flex items-center justify-center shadow-2xl overflow-hidden">
+                <img src="./images/resume_photo.jpg" alt="Profile Photo" class="w-[110%] h-[110%] object-contain">
+            </div>
+        </div>
+        <p class="text-xl text-tech-accent mb-2 font-medium">
+            モー　　イエ
+        </p>
+        <h1 class="text-5xl md:text-5xl font-bold font-serif mb-12 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+            莫　耶
+        </h1>
+        <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl mb-10 p-8 border border-navy-700/50 shadow-xl">
+            <div class="flex gap-9 text-lg leading-[2.0] text-gray-300">
+                <p class="flex-1 text-left text-justify">
+                    こんにちは、莫耶（もー いえ）です!<br>
+                    私は日本に来る前に、中国のインターネット企業でフルスタックエンジニアとして10年以上働いていました。<br>
+                    現在はHAL東京で情報処理を学んでいます。Webデザインからプログラミング、システム開発、データベース設計まで幅広く勉強中です。<br>
+                    特に近年は最新のAIプログラミング技術の習得に励んでおり、得た知識を即座に「就職作品」
+                </p>
+                <p class="flex-1 text-left text-justify">
+                    という形に落とし込むなど、常にスキルをアップデートし続けています。<br>
+                    今年で44歳になり、出身は中国・北京です。<br>
+                    趣味はレコード収集で、単に集めるだけでなく、作品の背景や録音環境まで徹底的にリサーチし、時代を超えて評価される『本物の価値』を追求しています。<br>
+                    ぜひ、私のポートフォリオを楽しんでいってください!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="part-time" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern bg-[size:60px_60px]"></div>
+    <div class="absolute top-1/4 left-1/4 w-80 h-80 bg-tech-cyan/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+        <div class="text-center mb-6">
+            <h2 class="text-4xl md:text-5xl font-bold font-serif mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                アルバイト経験
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-tech-cyan to-tech-teal mx-auto rounded-full"></div>
+            <p class="mt-6 text-gray-400 text-lg">
+                社会人としての経験と、そこから学んだこと
+            </p>
+        </div>
+
+        <div class="grid gap-4">
+            <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl p-6 border border-navy-700/50 hover:border-tech-cyan/30 transition-all duration-300 group">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-tech-accent transition-colors duration-300">
+                            サイゼリア
+                        </h3>
+                        <p class="text-tech-cyan text-sm font-medium">
+                            ホール・キッチンスタッフ
+                        </p>
+                    </div>
+                    <span class="text-gray-400 text-sm">
+                            飲食店
+                        </span>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-tech-accent mt-0.5 mr-3 flex-shrink-0" fill="none"
+                             stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                        <p class="text-gray-300 leading-relaxed">
+                            <span class="text-white font-medium">キッチン業務：</span>パスタや米料理の調理、ピザの焼き上げなど、多数のメニューを効率的かつ高品質に提供。繁忙期には複数のオーダーを同時にこなすタスク管理能力を養いました。<br>
+                            <span class="text-white font-medium">ホール業務：</span>お客様のご案内、オーダー受け付け、料理の提供、下膳までの接客全般を担当。多様なニーズに対応する柔軟性と、チーム内での円滑な連携を実現しました。
+                        </p>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-tech-teal mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <p class="text-gray-300 leading-relaxed">
+                            <span class="text-tech-teal font-medium">習得したスキル：</span>時間内に品質を担保する<span
+                                class="text-white">「プロセス最適化能力」</span>、予期せぬトラブルにも即座に対応する<span
+                                class="text-white">「問題解決力」</span>、お客様満足度を高める接客姿勢による<span
+                                class="text-white">「サービス精神」</span>を身につけました。これらは、チーム開発や顧客対応においても活かせる経験です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl p-6 border border-navy-700/50 hover:border-tech-teal/30 transition-all duration-300 group">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-tech-teal transition-colors duration-300">
+                            セブンイレブン
+                        </h3>
+                        <p class="text-tech-teal text-sm font-medium">
+                            スタッフ
+                        </p>
+                    </div>
+                    <span class="text-gray-400 text-sm">
+                            コンビニエンスストア
+                        </span>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-tech-accent mt-0.5 mr-3 flex-shrink-0" fill="none"
+                             stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                        <p class="text-gray-300 leading-relaxed">
+                            <span class="text-white font-medium">レジ業務：</span>迅速かつ丁寧な会計対応、顧客対応の第一線を担当。正確な計算とスムーズな操作で、混雑時でも円滑な業務遂行を実現しました。<br>
+                            <span class="text-white font-medium">商品管理：</span>商品の陳列、補充、在庫チェック、および鮮度管理を徹底。期限管理による廃棄ロス削減や、適切な発注タイミングの判断など、店舗運営の基礎となる運営能力を習得しました。
+                        </p>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-5 h-5 text-tech-teal mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <p class="text-gray-300 leading-relaxed">
+                            <span class="text-tech-teal font-medium">習得したスキル：</span>複数業務を並行して遂行する<span
+                                class="text-white">「マルチタスク処理能力」</span>、ルールを厳守し業務標準化を実現する<span
+                                class="text-white">「規律性」</span>、お客様一人ひとりにきめ細かく対応する<span
+                                class="text-white">「おもてなしの心」</span>を培いました。これはプロジェクト管理や品質管理にも直結する貴重な経験です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="hobbies" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern bg-[size:60px_60px]"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-tech-teal/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+        <div class="text-center mb-8">
+            <h2 class="text-4xl md:text-5xl font-bold font-serif mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                趣味・特技
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-tech-cyan to-tech-teal mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+            <div class="space-y-3">
+                <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-navy-700/50 hover:border-tech-cyan/30 transition-all duration-300 group">
+                    <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openModal('./images/record_fukuji_ryo.jpg')">
+                        <img src="./images/record_fukuji_ryo.jpg" alt="福知山龍一"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-tech-accent transition-colors duration-300">
+                            福居良
+                        </h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            日本のジャズシーンを代表する名盤。録音の精密さと演奏の表現力……
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-navy-700/50 hover:border-tech-teal/30 transition-all duration-300 group">
+                    <div class="relative h-64 overflow-hidden cursor-pointer" onclick="openModal('./images/record_chemical_brother.jpg')">
+                        <img src="./images/record_chemical_brother.jpg" alt="Chemical Brothers"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-tech-teal transition-colors duration-300">
+                            Chemical Brothers
+                        </h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            エレクトロニカの金字塔。革新的なサウンドデザインと重低音が特……
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl p-8 border border-navy-700/50 hover:border-tech-accent/30 transition-all duration-300 sticky top-24">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-tech-cyan/20 to-navy-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-tech-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                  d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white ml-4 group-hover:text-tech-accent transition-colors duration-300">
+                        レコード収集
+                    </h3>
+                </div>
+                <p class="text-gray-300 leading-relaxed text-lg mb-6">
+                    単に集めるだけでなく、作品の背景や録音環境まで徹底的にリサーチし、時代を超えて評価される「本物の価値」を追求しています。
+                </p>
+                <div class="space-y-4">
+                    <div class="bg-navy-900/50 rounded-xl p-4 border border-navy-700/30">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-5 h-5 text-tech-cyan mr-2" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-tech-cyan font-bold">収集実績</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            国内外で<span class="text-tech-accent font-bold">数百枚以上</span>の名盤を収集
+                        </p>
+                    </div>
+                    <div class="bg-navy-900/50 rounded-xl p-4 border border-navy-700/30">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-5 h-5 text-tech-teal mr-2" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span class="text-tech-teal font-bold">市場価値</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            市場価値が<span class="text-tech-accent font-bold">数倍に上昇</span>した稀少盤を多数保有
+                        </p>
+                    </div>
+                    <div class="bg-navy-900/50 rounded-xl p-4 border border-navy-700/30">
+                        <div class="flex items-center mb-2">
+                            <svg class="w-5 h-5 text-tech-accent mr-2" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                            <span class="text-tech-accent font-bold">リサーチ力</span>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            作品の背景や録音環境まで<span class="text-tech-accent font-bold">徹底的に調査</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 bg-navy-800/30 backdrop-blur-sm rounded-2xl p-8 border border-navy-700/50">
+            <h3 class="text-xl font-bold text-white mb-4 text-center">
+                趣味から得られる価値
+            </h3>
+            <p class="text-gray-300 leading-relaxed text-lg text-center">
+                こうした活動を通じて養った『本物の良さを見極める力』と『深い分析力』は、仕事における市場調査や品質の追求にも活かせると確信しています。レコード収集を通じて、情報を整理・蓄積する習慣が身につきました。これらの経験を、学習中の技術やアプリ制作にも生かしていきたいと考えています。
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="strengths" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern bg-[size:60px_60px]"></div>
+    <div class="absolute top-1/3 right-1/3 w-80 h-80 bg-tech-cyan/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+        <div class="text-center mb-10">
+            <h2 class="text-4xl md:text-5xl font-bold font-serif mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                強み・特長
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-tech-cyan to-tech-teal mx-auto rounded-full"></div>
+            <p class="mt-6 text-gray-400 text-lg">
+                私を定義する3つの強みと、それを裏付けるエピソード
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl p-8 border border-navy-700/50 hover:border-tech-cyan/30 transition-all duration-300 group">
+                <div class="flex items-center justify-center w-12 h-12 bg-tech-cyan/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span class="text-2xl font-bold text-tech-cyan">1</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-tech-accent transition-colors duration-300">
+                    問題解決能力
+                </h3>
+                <div class="space-y-4">
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        <span class="text-tech-accent font-medium">特徴：</span>
+                        目標達成に向けて粘り強く取り組む<b>「完遂力」</b>と、状況を多角的に分析しリスクを予見する<b>「洞察力」</b>を併せ持っています。
+                    </p>
+                    <div class="bg-navy-900/50 rounded-xl p-4">
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            <span class="text-tech-teal font-medium">実行力：</span><br>
+                            常にプロジェクトのゴールを明確にし、細部まで妥協せず完成度の高い成果物を追求します。
+                        </p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            <span class="text-tech-teal font-medium">予見力：</span><br>
+                            開発過程で発生しうるボトルネックを直感的に察知し、先回りして対策を講じることで、手戻りの少ない効率的な開発を実現してきました。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl p-8 border border-navy-700/50 hover:border-tech-teal/30 transition-all duration-300 group">
+                <div class="flex items-center justify-center w-12 h-12 bg-tech-teal/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span class="text-2xl font-bold text-tech-teal">2</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-tech-teal transition-colors duration-300">
+                    自主的な学習
+                </h3>
+                <div class="space-y-4">
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        <span class="text-tech-accent font-medium">特徴：</span>
+                        未知の領域に対しても、短期間で成果を出す自学自習能力に自信があります。
+                    </p>
+                    <div class="bg-navy-900/50 rounded-xl p-4">
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            <span class="text-tech-teal font-medium">実績：</span><br>
+                            来日後わずか1年で、日本語能力試験（JLPT）N2合格と、日本のITスキルの登竜門である「基本情報技術者試験」への一発合格を同時に果たしました。
+                        </p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            <span class="text-tech-teal font-medium">継続的な探究心：</span><br>
+                            現在は、最新の<b>AIプログラミング</b>技術の習得に励んでおり、得た知識を即座に「就職作品」という形に落とし込むなど、常にスキルをアップデートし続けています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl p-8 border border-navy-700/50 hover:border-tech-accent/30 transition-all duration-300 group">
+                <div class="flex items-center justify-center w-12 h-12 bg-tech-accent/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span class="text-2xl font-bold text-tech-accent">3</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-tech-accent transition-colors duration-300">
+                    豊富な実務経験
+                </h3>
+                <div class="space-y-4">
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        <span class="text-tech-accent font-medium">特徴：</span>
+                        エンジニアとしての長年のキャリアを通じ、多岐にわたる技術スタックとチーム開発の知見を蓄積してきました。
+                    </p>
+                    <div class="bg-navy-900/50 rounded-xl p-4">
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            <span class="text-tech-teal font-medium">技術の幅：</span><br>
+                            Java、Python、Go、C#、Reactなど、フロントエンドからバックエンドまで広範な開発経験を有しています。
+                        </p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            <span class="text-tech-teal font-medium">協調性：</span><br>
+                            単なる実装者としてだけでなく、チーム全体の進捗やコミュニケーションを円滑にする動きを重視し、円滑なプロジェクト進行に貢献できます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--        <div class="mt-12 bg-gradient-to-r from-navy-800/50 to-navy-700/50 backdrop-blur-sm rounded-2xl p-8 border border-navy-700/50">-->
+<!--            <div class="flex items-start">-->
+<!--                <div class="flex-shrink-0 w-12 h-12 bg-tech-accent/20 rounded-full flex items-center justify-center mr-4">-->
+<!--                    <svg class="w-6 h-6 text-tech-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">-->
+<!--                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"-->
+<!--                              d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>-->
+<!--                    </svg>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <h3 class="text-xl font-bold text-white mb-3">-->
+<!--                        企業へのアピールポイント-->
+<!--                    </h3>-->
+<!--                    <p class="text-gray-400 leading-relaxed">-->
+<!--                        ここにあなたの強みが志望する企業でどのように活かせるか、具体的に記載してください。<br>-->
+<!--                        例：私の問題解決能力と学習意欲を活かして、貴社のプロダクト開発に貢献したいと考えています。-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</section>
+
+<section id="portfolio" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern bg-[size:60px_60px]"></div>
+    <div class="absolute bottom-1/3 left-1/3 w-80 h-80 bg-tech-teal/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-2">
+        <div class="text-center mb-6">
+            <h2 class="text-4xl md:text-5xl font-bold font-serif mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                ポートフォリオ
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-tech-cyan to-tech-teal mx-auto rounded-full"></div>
+            <p class="mt-6 text-gray-400 text-lg">
+                実際に作成したプロジェクトと、そこから学んだこと
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl border border-navy-700/50 hover:border-tech-cyan/30 transition-all duration-300 group">
+                <div class="relative h-56 overflow-hidden rounded-t-2xl cursor-pointer" onclick="openModal('./images/project_1.jpg')">
+                    <img src="./images/project_1.jpg" alt="Price Watcher プロジェクト"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-tech-cyan/20 to-navy-700 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-tech-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-tech-accent transition-colors duration-300">
+                                Price Watcher（プライス・ウォッチャー）
+                            </h3>
+                            <p class="text-sm text-gray-400">2025年12月</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Amazon 上の指定商品を対象に、定期的に価格を取得し、価格変動
+                        の履歴をデータベースに保存する。<br>
+                        取得した価格データはフロントエンド上でグラフ表示され、
+                        過去の価格推移を可視化することで、購入タイミングの判断を支援します。
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-tech-cyan/10 text-tech-cyan text-xs font-medium rounded-full">Java</span>
+                        <span class="px-3 py-1 bg-tech-cyan/10 text-tech-cyan text-xs font-medium rounded-full">SpringBoot</span>
+                        <span class="px-3 py-1 bg-tech-cyan/10 text-tech-cyan text-xs font-medium rounded-full">Playwright</span>
+                        <span class="px-3 py-1 bg-tech-cyan/10 text-tech-cyan text-xs font-medium rounded-full">React</span>
+                        <span class="px-3 py-1 bg-tech-cyan/10 text-tech-cyan text-xs font-medium rounded-full">TypeScript</span>
+                    </div>
+                    <div class="bg-navy-900/50 rounded-xl p-4">
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            <span class="text-tech-teal font-medium">学び：</span><br>
+                            Spring Boot における @Scheduled と Playwright を組み合わせた
+                            効率的なデータ取得処理の実装方法を学びました。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl border border-navy-700/50 hover:border-tech-teal/30 transition-all duration-300 group">
+                <div class="relative h-56 overflow-hidden rounded-t-2xl cursor-pointer" onclick="openModal('./images/project_2.jpg')">
+                    <img src="./images/project_2.jpg" alt="AI アシスタント プロジェクト"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-tech-teal/20 to-navy-700 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-tech-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-tech-teal transition-colors duration-300">
+                                AI アシスタント
+                            </h3>
+                            <p class="text-sm text-gray-400">2026年1月</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        本システムは音声認識によってユーザーの指示を取得し、意図解析を行います。<br>
+                        その結果を基に、LangGraph と OpenAI API を連携させ、状況に応じた最適なツール選択と出力生成を実現します。
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-tech-teal/10 text-tech-teal text-xs font-medium rounded-full">Python</span>
+                        <span class="px-3 py-1 bg-tech-teal/10 text-tech-teal text-xs font-medium rounded-full">FastAPI</span>
+                        <span class="px-3 py-1 bg-tech-teal/10 text-tech-teal text-xs font-medium rounded-full">LangGraph</span>
+                        <span class="px-3 py-1 bg-tech-teal/10 text-tech-teal text-xs font-medium rounded-full">MCP</span>
+                        <span class="px-3 py-1 bg-tech-teal/10 text-tech-teal text-xs font-medium rounded-full">Context Engineering</span>
+                    </div>
+                    <div class="bg-navy-900/50 rounded-xl p-4">
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            <span class="text-tech-teal font-medium">学び：</span><br>
+                            このプロジェクトを通じて、LangGraph を用いた Agent ベースのワークフロー設計や、MCP サーバーの呼び出し方法、ならびに基礎的なコンテキストエンジニアリングの実践について学びました。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-pattern bg-[size:60px_60px]"></div>
+    <div class="absolute top-1/4 right-1/4 w-80 h-80 bg-tech-accent/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <div class="mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold font-serif mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                お問い合わせ
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-tech-cyan to-tech-teal mx-auto rounded-full"></div>
+        </div>
+
+        <div class="mt-16">
+            <div class="bg-gradient-to-r from-navy-800/80 to-navy-700/80 backdrop-blur-sm rounded-2xl p-12 border border-navy-700/50">
+                <h3 class="text-2xl font-bold text-white mb-4">
+                    ご連絡をお待ちしています
+                </h3>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                    私のスキルと経験が、貴社のプロジェクトに貢献できると確信しています。<br>
+                    ご興味をお持ちいただけましたら、ぜひご連絡ください。
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <ul>
+                        <li>Tel: +81 070-4797-7633</li>
+                        <li>Email: <a href="mailto:moyerock@gmail.com">moyerock@gmail.com</a></li>
+                        <li><br></li>
+                        <li>Blog: <a href="https://www.moye.me/" target="_blank">http://www.moye.me</a></li>
+                        <li> Github: <a href="https://github.com/rockdragon/" target="_blank">https://github.com/rockdragon</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-16 text-center text-gray-500 text-sm">
+            <p>&copy; 2026 莫耶（モー　イエ）. All rights reserved.</p>
+        </footer>
+    </div>
+</section>
+
+<div id="imageModal" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-navy-900/95 backdrop-blur-md transition-opacity duration-300"></div>
+
+    <button onclick="closeModal()" class="absolute top-6 right-6 z-20 w-10 h-10 bg-navy-800/80 hover:bg-navy-700/80 rounded-full border border-navy-600/50 hover:border-tech-cyan/50 transition-all duration-300 flex items-center justify-center group">
+        <svg class="w-6 h-6 text-gray-400 group-hover:text-tech-cyan transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+    </button>
+
+    <div class="relative z-10 flex items-center justify-center h-full w-full p-4 md:p-8" onclick="closeModal()">
+        <div class="max-w-5xl max-h-full overflow-auto rounded-2xl border border-navy-700/50 shadow-2xl bg-navy-800/50">
+            <img id="modalImage" src="" alt="Project Image" class="max-w-full h-auto object-contain">
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
