@@ -491,7 +491,7 @@
 
         <div class="grid md:grid-cols-2 gap-8">
             <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl border border-navy-700/50 hover:border-tech-cyan/30 transition-all duration-300 group">
-                <div class="relative h-56 overflow-hidden rounded-t-2xl cursor-pointer" onclick="openModal('./videos/project_1.mp4')">
+                <div class="relative h-56 overflow-hidden rounded-t-2xl cursor-pointer" onclick="openModal('https://player.vimeo.com/video/1155621577?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')">
                     <img src="./images/project_1.jpg" alt="Price Watcher プロジェクト"
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -540,7 +540,7 @@
             </div>
 
             <div class="bg-navy-800/50 backdrop-blur-sm rounded-2xl border border-navy-700/50 hover:border-tech-teal/30 transition-all duration-300 group">
-                <div class="relative h-56 overflow-hidden rounded-t-2xl cursor-pointer" onclick="openModal('./videos/project_2.mp4')">
+                <div class="relative h-56 overflow-hidden rounded-t-2xl cursor-pointer" onclick="openModal('https://player.vimeo.com/video/1155621548?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')">
                     <img src="./images/project_2.jpg" alt="AI アシスタント プロジェクト"
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -637,8 +637,9 @@
     </button>
 
     <div class="relative z-10 flex items-center justify-center h-full w-full p-4 md:p-8" onclick="closeModal()">
-        <div class="max-w-5xl max-h-full overflow-auto rounded-2xl border border-navy-700/50 shadow-2xl bg-navy-800/50" onclick="event.stopPropagation()">
-            <video id="modalVideo" controls autoplay class="max-w-full max-h-[80vh] object-contain"></video>
+        <div class="w-[80vw] h-[80vh] rounded-2xl border border-navy-700/50 shadow-2xl bg-navy-800/50" onclick="event.stopPropagation()">
+            <video id="modalVideo" controls autoplay class="w-full h-full object-contain hidden"></video>
+            <iframe id="modalIframe" class="w-full h-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
     </div>
 </div>
