@@ -416,7 +416,7 @@
                     <div class="bg-navy-900/50 rounded-xl p-4">
                         <p class="text-gray-400 text-sm leading-relaxed">
                             <span class="text-tech-teal font-medium">実績：</span><br>
-                            来日後わずか1年で、日本語能力試験（JLPT）N2合格と、日本のITスキルの登竜門である「基本情報技術者試験」への一発合格を同時に果たしました。
+                            来日後わずか1年で、日本語能力試験（JLPT）N2合格と、日本のITスキルの登竜門である<span class="text-tech-accent font-medium underline cursor-pointer hover:text-tech-cyan transition-colors duration-300" onclick="openModal('./images/certificate_ipa.jpg')">「基本情報技術者試験」</span>への一発合格を同時に果たしました。
                         </p>
                         <p class="text-gray-400 text-sm leading-relaxed">
                             <span class="text-tech-teal font-medium">継続的な探究心：</span><br>
@@ -639,7 +639,8 @@
     <div class="relative z-10 flex items-center justify-center h-full w-full p-4 md:p-8" onclick="closeModal()">
         <div class="w-[80vw] h-[80vh] rounded-2xl border border-navy-700/50 shadow-2xl bg-navy-800/50" onclick="event.stopPropagation()">
             <video id="modalVideo" controls autoplay class="w-full h-full object-contain hidden"></video>
-            <iframe id="modalIframe" class="w-full h-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe id="modalIframe" class="w-full h-full hidden" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <img id="modalImage" class="w-full h-full object-contain hidden" alt="Modal Image">
         </div>
     </div>
 </div>

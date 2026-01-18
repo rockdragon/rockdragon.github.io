@@ -80,16 +80,25 @@ document.addEventListener('DOMContentLoaded', function() {
 const modal = document.getElementById('imageModal');
 const modalVideo = document.getElementById('modalVideo');
 const modalIframe = document.getElementById('modalIframe');
+const modalImage = document.getElementById('modalImage');
 
 function openModal(src) {
     const isVimeo = src.includes('vimeo.com/video') || src.includes('player.vimeo.com');
+    const isImage = src.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i);
 
     if (isVimeo) {
         modalVideo.classList.add('hidden');
+        modalImage.classList.add('hidden');
         modalIframe.classList.remove('hidden');
         modalIframe.src = src;
+    } else if (isImage) {
+        modalVideo.classList.add('hidden');
+        modalIframe.classList.add('hidden');
+        modalImage.classList.remove('hidden');
+        modalImage.src = src;
     } else {
         modalIframe.classList.add('hidden');
+        modalImage.classList.add('hidden');
         modalVideo.classList.remove('hidden');
         modalVideo.src = src;
         modalVideo.play();
@@ -104,6 +113,7 @@ function closeModal() {
     modalVideo.currentTime = 0;
     modalVideo.src = '';
     modalIframe.src = '';
+    modalImage.src = '';
     modal.classList.add('hidden');
     document.body.style.overflow = 'auto';
 }
