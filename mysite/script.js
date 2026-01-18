@@ -78,15 +78,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const modal = document.getElementById('imageModal');
-const modalImage = document.getElementById('modalImage');
+const modalVideo = document.getElementById('modalVideo');
 
-function openModal(imageSrc) {
-    modalImage.src = imageSrc;
+function openModal(videoSrc) {
+    modalVideo.src = videoSrc;
     modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
+    modalVideo.play();
 }
 
 function closeModal() {
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
     modal.classList.add('hidden');
     document.body.style.overflow = 'auto';
 }
